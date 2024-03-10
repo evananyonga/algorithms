@@ -21,5 +21,5 @@ my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 result = linear_search(my_list, 12)
 verify(result)
 
-result2 = linear_search(my_list, 6)
-verify(result2)
+result = linear_search(my_list, 6)
+verify(result)
