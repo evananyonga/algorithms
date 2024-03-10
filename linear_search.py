@@ -10,7 +10,7 @@ def linear_search(list, target):
     return None
 
 
-def verify(index) -> int:
+def verify(index):
     if index is not None:
         print("The number was found at index: ", index)
     else:

@@ -4,7 +4,6 @@ def binary_search(nlist, target):
 
     while first <= last:
         mid_point = (first + last)//2
-        print(mid_point)
 
         if nlist[mid_point] == target:
             return mid_point
@@ -13,3 +12,17 @@ def binary_search(nlist, target):
         else:
             last = mid_point - 1
     return None
+
+def verify(index):
+    if index is not None:
+        print("The number was found at index: ", index)
+    else:
+        print("The number does exist in the list")
+
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = binary_search(my_list, 12)
+verify(result)
+
+result = binary_search(my_list, 6)
+verify(result)
