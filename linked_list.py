@@ -18,4 +18,10 @@ class LinkedList:
     """
 
     def __init__(self):
+        # always set newer lists to empty
         self.head = None
+
+    # checking status of linkedlist
+    def is_empty(self):
+        return self.head == None
+    
