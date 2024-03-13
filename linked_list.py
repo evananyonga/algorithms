@@ -11,3 +11,11 @@ class Node:
 
     def __repr__(self) -> str:
         return "<Node data: %s>" % self.data
+    
+class LinkedList:
+    """ 
+    Singly Linked List
+    """
+
+    def __init__(self):
+        self.head = None
