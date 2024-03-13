@@ -8,3 +8,6 @@ class Node:
 
     def __init__(self, data):
         self.data = data
+
+    def __repr__(self) -> str:
+        return "<Node data: %s>" % self.data
