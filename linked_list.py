@@ -38,3 +38,13 @@ class LinkedList:
             count += 1
             current = current.next_node
         return count
+    
+    def add(self, item):
+        """
+        Adds a new node containing data (item) at the head of the list
+        This operation takes constant time O(1)
+        """
+        new_node = Node(item)
+        new_node.next_node = self.head
+
+        self.head = new_node
