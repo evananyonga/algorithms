@@ -25,3 +25,16 @@ class LinkedList:
     def is_empty(self):
         return self.head == None
     
+    # knowing the size of the linked list
+    def size(self):
+        """
+        Returns the number of nodes in a list and --
+        Takes linear time -- O(n)
+        """
+        current = self.head
+        count = 0
+
+        while current:
+            count += 1
+            current = current.next_node
+        return count
