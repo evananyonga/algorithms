@@ -19,3 +19,15 @@ def merge_sort(_list) -> list:
 
     return merge(left, right)
 
+def split(_list):
+    """
+    Divide the unsorted list at midpoit into sublists
+    Return two sublists
+    """
+
+    midpoint = len(_list)//2
+    left = _list[:midpoint]
+    right = _list[midpoint:]
+
+    return left, right
+
