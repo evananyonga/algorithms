@@ -8,7 +8,7 @@ def merge_sort(_list) -> list:
     Conquer: Recursively sort the sublists created in the previous step
     Combine: Merge the sorted sublists created in the previous step
 
-    Takes overall O(kn log n) time
+    Takes overall O(nlog n) time
     """
 
     # naively sorted list is the simplest form of solution
@@ -26,12 +26,25 @@ def split(_list):
     Divide the unsorted list at midpoit into sublists
     Return two sublists
 
-    Takes overall O(k log n) time
+    Takes overall O(log n) time
     """
 
     midpoint = len(_list)//2
-    left = _list[:midpoint]
-    right = _list[midpoint:]
+
+    start = 0
+    end = len(_list) - 1
+    
+    left = []
+    right = []
+        
+    while start < midpoint:
+        left.append(_list[start])
+        start += 1
+
+    while start <= end:
+        if start >= midpoint:
+            right.append(_list[start])
+        start += 1
 
     return left, right
 
@@ -78,3 +91,4 @@ alist = [54,26,23,17,77,18,44,20,13]
 l = merge_sort(alist)
 print(verify_sorted(alist))
 print(verify_sorted(l))
+print(split(alist))
