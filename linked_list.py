@@ -117,7 +117,7 @@ class LinkedList:
             return self.head
         else:
             current = self.head
-            position = None
+            position = 0
         
         while position < index:
             current = current.next_node
