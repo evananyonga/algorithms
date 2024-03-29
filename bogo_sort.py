@@ -1,4 +1,8 @@
+import sys
 import random
+from load import load_numbers
+
+numbers = load_numbers(sys.argv[1])
 
 def is_sorted(_list):
     for index in range(len(_list) - 1):
@@ -13,3 +17,5 @@ def bogo_sort(items):
     while not is_sorted(items):
         random.shuffle(items)
     return items
+
+print(bogo_sort(numbers))
