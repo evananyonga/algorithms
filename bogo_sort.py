@@ -14,8 +14,11 @@ def bogo_sort(items):
     """
     I'll call this a bogus sort. It randomly shuffles the list untils it's sorted
     """
+    attempts = 0
     while not is_sorted(items):
+        print(attempts)
         random.shuffle(items)
+        attempts += 1
     return items
 
 print(bogo_sort(numbers))
