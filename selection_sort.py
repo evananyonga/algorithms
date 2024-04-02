@@ -4,6 +4,9 @@ from load import load_numbers
 numbers = load_numbers(sys.argv[1])
 
 def selection_sort(list_of_nos):
+    """ 
+    Performs sort by going through the iterables and sorting them at each iteration
+    """
     sorted_list = []
     print("%-25s %-25s" % (list_of_nos, sorted_list))
     for ind in range(len(list_of_nos)):
