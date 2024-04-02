@@ -5,9 +5,11 @@ numbers = load_numbers(sys.argv[1])
 
 def selection_sort(list_of_nos):
     sorted_list = []
+    print("%-25s %-25s" % (list_of_nos, sorted_list))
     for ind in range(len(list_of_nos)):
         index_to_move = index_of_min(list_of_nos)
         sorted_list.append(list_of_nos.pop(index_to_move))
+        print("%-25s %-25s" % (list_of_nos, sorted_list))
     return sorted_list
 
 def index_of_min(vals):
@@ -20,4 +22,6 @@ def index_of_min(vals):
 
 print(selection_sort(numbers))
 
+# evaluate time it takes to run program via terminal
+# `time python selection_sort.py num.txt` 
 # print(index_of_min(numbers))
